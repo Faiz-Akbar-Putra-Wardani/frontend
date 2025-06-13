@@ -16,8 +16,8 @@ export default function QuestionPages() {
     const fetchOptions = async () => {
       try {
         const [genresRes, mediaTypesRes] = await Promise.all([
-          axios.get("http://localhost:9000/genres"),
-          axios.get("http://localhost:9000/mediaTypes"),
+          axios.get(`${import.meta.env.VITE_API_BASE_URL}/genres`),
+          axios.get(`${import.meta.env.VITE_API_BASE_URL}/mediaTypes`),
         ]);
 
         const qList = [
@@ -70,7 +70,7 @@ export default function QuestionPages() {
         };
 
         const res = await axios.post(
-          "http://localhost:9000/films/filter",
+          `${import.meta.env.VITE_API_BASE_URL}/films/filter`,
           payload,
           {
             headers: {

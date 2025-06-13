@@ -21,7 +21,7 @@ export default function OutputPages() {
         };
 
         const { data } = await axios.post(
-          'http://localhost:9000/recommend',
+           `${import.meta.env.VITE_API_BASE_URL}/recommend`,
           payload,
           {
             headers: {
