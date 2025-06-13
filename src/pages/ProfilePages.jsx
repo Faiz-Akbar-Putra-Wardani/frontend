@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import backgroundImg from "../assets/panggung.jpg";
+import backgroundImg from "../../public/assets/panggung.jpg";
 import { useState, useEffect} from "react";
 
 export default function ProfilePages() {
